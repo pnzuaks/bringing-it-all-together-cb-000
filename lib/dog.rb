@@ -72,7 +72,7 @@ class Dog
     new_dog
   end
 
-  def self.find_by_id(name)
+  def self.find_by_id(id)
    sql = <<-SQL
      SELECT *
      FROM dogs
@@ -80,7 +80,7 @@ class Dog
      LIMIT 1
    SQL
 
-    found = DB[:conn].execute(sql,name)
+    found = DB[:conn].execute(sql,id)
     new_dog_obj = self.new(found[1], found[2], found[0])
     puts new_dog_obj
  end
