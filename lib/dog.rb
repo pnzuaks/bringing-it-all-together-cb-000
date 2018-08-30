@@ -82,7 +82,7 @@ class Dog
 
     found = DB[:conn].execute(sql,name)
     new_dog_obj = self.new_from_db(found[0])
-    puts "Hi" + new_dog_obj
+    new_dog_obj
  end
 
  def self.find_or_create_by(name:, breed:)
