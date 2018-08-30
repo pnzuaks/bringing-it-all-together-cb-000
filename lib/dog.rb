@@ -13,7 +13,7 @@ class Dog
     attr_accessor key
   end
 
-  def initialize(name, breed, id = nil)
+  def initialize(name:, breed:, id:nil)
     @id= id
     @name = name
     @breed = breed
