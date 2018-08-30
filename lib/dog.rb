@@ -81,11 +81,11 @@ class Dog
   sql = <<-SQL
     SELECT *
     FROM dogs
-    WHERE id = ?
+    WHERE name = ?
     LIMIT 1
   SQL
 
-   found = DB[:conn].execute(sql,id)
+   found = DB[:conn].execute(sql,name)
    new_dog_obj = self.new_from_db(found)
    puts new_dog_obj
  end
