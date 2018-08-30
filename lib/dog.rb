@@ -54,14 +54,6 @@ class Dog
       self
   end
 
-  # def self.create(attributes_hash)
-  #   self.new.tap do |d|
-  #     attributes_hash.each do |att_name, att_value|
-  #       d.send("#{att_name}=", att_value)
-  #     end
-  #     d.save()
-  #   end
-  # end
   def self.create(name: name, breed: breed)
   dog = Dog.new(name: name, breed: breed)
   dog.save()
