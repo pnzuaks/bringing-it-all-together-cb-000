@@ -8,3 +8,4 @@ gem 'rspec'
 
 # Debugging
 gem 'pry'
+gem 'pry-nav'
