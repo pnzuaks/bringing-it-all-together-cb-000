@@ -81,7 +81,7 @@ class Dog
    SQL
 
     found = DB[:conn].execute(sql,id)
-    new_dog_obj = self.new(found[1], found[2], found[0])
+    new_dog_obj = self.new_from_db(found)
     puts new_dog_obj
  end
 
